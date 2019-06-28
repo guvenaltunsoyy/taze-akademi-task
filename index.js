@@ -99,14 +99,6 @@ function setUrl(tags){
      return result+"</ol>";
 }
 
-function previous(previousURL){
-  alert(previousURL);
-  if(previousURL!="null"){
-    loadCharacter(previousURL);
-  }else{
-    alert("previous is null");
-  }
-}
 function getNextURL(){
   var count=parseInt(document.getElementById("next").value);
   count++;
