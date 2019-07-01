@@ -39,10 +39,9 @@ function loadCharacter(peopleUrl) {
           var myObj = JSON.parse(this.responseText);
           for (var item of myObj.results){
             buttonTag+="<button id='"+item.url+"' class='btn btn-success' type='button' onClick=loadCharacter('"+item.url+"') >"+item.name+"</button>";
-            document.getElementById("next").innerHTML=buttonTag;      
            }
            if(myObj.next==null){
-            document.getElementById("next").innerHTML+="</div><div id='container'><p id='content'></p></div>";
+            document.getElementById("next").innerHTML+=buttonTag+"</div><div id='container'><p id='content'></p></div>";
           }else{
             countBar(myObj.next,buttonTag);
           }
