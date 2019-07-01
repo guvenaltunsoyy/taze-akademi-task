@@ -39,7 +39,13 @@ function loadCharacter(peopleUrl) {
           var myObj = JSON.parse(this.responseText);
           for (var item of myObj.results){
             buttonTag+="<button id='"+item.url+"' class='btn btn-success' type='button' onClick=loadCharacter('"+item.url+"') >"+item.name+"</button>";
+<<<<<<< HEAD
            }
+=======
+            }
+          document.getElementById("next").innerHTML=buttonTag;      
+           
+>>>>>>> aaedfa2aefc43e815e3fdd30c515bc6ada93a983
            if(myObj.next==null){
             document.getElementById("next").innerHTML+=buttonTag+"</div><div id='container'><p id='content'></p></div>";
           }else{
